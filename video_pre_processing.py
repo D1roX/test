@@ -25,12 +25,12 @@ class VideoPreProcessing:
         self.video_fragments_count = 0
         self.frames_count = 0
 
-        if not os.path.exists('records'):
-            os.mkdir('records')
+        # if not os.path.exists('records'):
+        #     os.mkdir('records')
 
         t = datetime.now()
         self.output_folder = f'records\\{t.day}.{t.month}.{t.year} {t.hour}-{t.minute}-{t.second}'
-        os.mkdir(self.output_folder)
+        # os.mkdir(self.output_folder)
 
     def set_config_realsense(self, stream_type=config.stream_type, weight=config.input_weight,
                              height=config.input_height, stream_format=config.stream_format, fps=config.fps):
